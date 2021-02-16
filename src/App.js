@@ -1,22 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import Signup from './routes/Signup';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useAuth } from './context/AuthContext'
+import Signup from './routes/Signup'
+import Login from './routes/Login'
 
-import './static/App.scss';
+import './static/App.scss'
 
-const App = () => {
+function App () {
+  const { currentUser } = useAuth();
+  console.log(currentUser)
   return (
-    <AuthProvider>
-      <div className='app'>
+    <div className='app'>
+    {
+      !currentUser ?
         <Router>
           <Switch>
-            <Route path="/signup" component={Signup} />
+            <Route exact path='/signup' component={Signup} />
+            <Route exact path='/login' component={Login} />
           </Switch>
         </Router>
-      </div>
-    </AuthProvider>
+      :
+        <Router>
+          <Switch>
+          </Switch>
+        </Router>
+    }
+    </div>
   )
 }
 
-export default App;
+export default App
