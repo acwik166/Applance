@@ -23,7 +23,6 @@ const PropertyItem = ({ data }) => {
       <div className='details'>
         <h3>{data.name}</h3>
         <p>
-          {' '}
           {data.address.street}, {data.address.city}, {data.address.zip}
         </p>
       </div>

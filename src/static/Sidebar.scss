@@ -26,6 +26,8 @@
       &:hover {
         color: $txt-hover;
         background-color: $accent-hover;
+        -webkit-transform: scale(0.95);
+        transition-duration: 300ms;
       }
 
       .bar__icon {

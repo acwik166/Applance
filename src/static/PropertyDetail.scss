@@ -1,0 +1,22 @@
+@import 'variables';
+.property__detail {
+  display: flex;
+  flex-direction: row;
+
+  .card {
+    padding: 30px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    // border-bottom: 3px solid $bcg;
+    box-shadow: 2px 2px 4px 1px rgb(233, 233, 233);
+  
+    .image {
+      img  {
+        width: 20rem;
+        object-fit: fill;
+        border-radius: 15px;
+      }
+    }
+  }
+}
