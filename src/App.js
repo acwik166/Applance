@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
+import Sidebar from './components/Sidebar'
 import Signup from './routes/Signup'
 import Login from './routes/Login'
-import Sidebar from './components/Sidebar'
+import Properties from './routes/Properties'
 
 import './static/App.scss'
 
 function App () {
   const { currentUser } = useAuth();
-  console.log(currentUser)
   return (
     <div className='app'>
     {
@@ -24,6 +24,7 @@ function App () {
         <Router>
           <Sidebar />
           <Switch>
+            <Route exact path="/properties" component={Properties} />
           </Switch>
         </Router>
     }

@@ -16,7 +16,7 @@ const Sidebar = () => {
         </div>
         <div className="link">
           <HomeIcon className="bar__icon" />
-          <p className="link__text">Properties</p>
+          <a href="properties" className="link__text">Properties</a>
         </div>
       </div>
       <div className="footer">
