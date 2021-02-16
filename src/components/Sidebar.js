@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home';
 
 import '../static/Sidebar.scss'
@@ -16,7 +17,7 @@ const Sidebar = () => {
         </div>
         <div className="link">
           <HomeIcon className="bar__icon" />
-          <a href="properties" className="link__text">Properties</a>
+          <Link to="/properties" className="link__text">Properties</Link>
         </div>
       </div>
       <div className="footer">

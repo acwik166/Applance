@@ -1,0 +1,30 @@
+@import 'variables';
+
+.property__item {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px 15px;
+  border-bottom: 3px solid $bcg;
+  box-shadow: 2px 2px 4px 1px rgb(233, 233, 233);
+  cursor: pointer;
+  &:hover {
+    background-color: #f9f9f9;
+    -webkit-transform: scale(0.95);
+    transition-duration: 300ms;
+  }
+
+  .image {
+    padding: 5px 0;
+    img {
+      width: 12rem;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+  }
+
+  .details {
+    p {
+      font-size: 13px;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar'
 import Signup from './routes/Signup'
 import Login from './routes/Login'
 import Properties from './routes/Properties'
+import PropertyDetail from './routes/PropertyDetail'
 
 import './static/App.scss'
 
@@ -25,6 +26,7 @@ function App () {
           <Sidebar />
           <Switch>
             <Route exact path="/properties" component={Properties} />
+            <Route exact path="/property/:id" component={PropertyDetail} />
           </Switch>
         </Router>
     }

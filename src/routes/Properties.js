@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
-import PropertyList from '../components/PropertyList'
+import PropertyItem from '../components/PropertyItem'
 
 import '../static/Properties.scss'
 
@@ -9,17 +9,14 @@ const Properties = () => {
 
   useEffect(() => {
     db.collection('properties').onSnapshot(snapshot =>
-      setProperties(snapshot.docs.map(doc => doc.data()))
+      setProperties(snapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
     )
   }, [])
 
-  console.log(properties)
-
   return (
     <div className='properties'>
-      <h1>properties</h1>
       {properties.map(prop => (
-        <PropertyList data={prop} />
+        <PropertyItem data={prop} />
       ))}
     </div>
   )
