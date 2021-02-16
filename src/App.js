@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
 import Signup from './routes/Signup'
 import Login from './routes/Login'
+import Sidebar from './components/Sidebar'
 
 import './static/App.scss'
 
@@ -21,6 +22,7 @@ function App () {
         </Router>
       :
         <Router>
+          <Sidebar />
           <Switch>
           </Switch>
         </Router>

@@ -1,0 +1,45 @@
+@import 'variables';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: $bcg;
+  min-width: 150px;
+  padding: 10px 15px;
+
+  .heading {
+    color: $txt;
+  }
+
+  .links {
+    margin: 10px 0;
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin: 10px 0;
+      color: $txt;
+      background-color: $accent;
+      border-radius: 15px;
+      &:hover {
+        color: $txt-hover;
+        background-color: $accent-hover;
+      }
+
+      .bar__icon {
+        margin: 0 0 0 5px;
+        font-size: 21px;
+      }
+
+      .link__text {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+
+  .footer {
+    align-self: flex-end;
+  }
+}
